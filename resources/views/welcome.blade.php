@@ -37,32 +37,30 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        {{-- <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Register</a>
                         </li> --}}
+                        @if (Route::has('login'))
+                        @auth
+                        <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="nav-link">Home</a>
+                        </li>
+                        @else
+                        <li class="nav-item active">
+                            <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                        </li>
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
+                        @endif
+                        @endauth
+                        @endif
                     </ul> 
                 </div>
-            </div>
-            <div class="relative flex items-top justify-center sm:items-center sm:pt-0">
-                @if (Route::has('login'))
-                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                        @auth
-                            <a href="{{ url('/home') }}" class="nav-item">Home</a>
-                        @else
-                            <a href="{{ route('login') }}" class="nav-item">Log in</a>
-    
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="nav-item">Register</a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
             </div>
         </nav>
         <!--- Image Slider -->
@@ -78,8 +76,8 @@
 					<div class="carousel-caption">
 						<h1 class="display-2">Vehicle Service</h1>
 						<h2>Booking System</h2>
-						<button type="button" class="btn btn-outline-light btn-lg">REGISTER</button>
-						<button type="button" class="btn btn-primary btn-lg">LOGIN</button>
+						<a href="{{ route('register') }}"><button type="button" class="btn btn-outline-light btn-lg">REGISTER</button></a>
+						<a href="{{ route('login') }}"><button type="button" class="btn btn-primary btn-lg">LOGIN</button></a>
 					</div>
 				</div>
 				<div class="carousel-item">
