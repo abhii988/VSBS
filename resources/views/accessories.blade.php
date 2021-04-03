@@ -9,20 +9,26 @@
 		<meta charset="utf-8">
 		<title>Accessories</title>
         <!-- Google Web Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>    
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Indie Flower&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-            
+
         <!--Choco bar Theme CSS style -->
-        <link href="acc/css/products.css" rel="stylesheet">     
-        <link rel="stylesheet" href="acc/css/animate.css">      
-    </head> --}}
+        <link href="acc/css/products.css" rel="stylesheet">
+        <link rel="stylesheet" href="acc/css/animate.css"> --}}
+    <style>
+        h1 {
+            text-align: center;
+            padding: 2%;
+        }
+    </style>
+    </head>
 	<body >
 {{-- <!-- Products section -->
 		<div class="section outdiv" id="specialities">
  	     <div class="container">
     	  <div class="col-md-12"><h1 class="text-center wow pulse"><span>Our Specialities</span></h1>
     				<p class="sub-headers text-center">Top rated by customers!</p>
-			
+
                 <div class="speciality wow fadeIn" data-wow-delay="0.6s">
 
 	             <div class="spe-prods">
@@ -57,7 +63,7 @@
 						<div class="month">
 							<p> / 6 piece</p>
 						</div>
-						
+
 					</div>
 					<div class="ordersection">
 						<a href="#" class="buybtn">Order</a>
@@ -84,27 +90,28 @@
 					</div>
 				</div>
               </div>
-           </div>   
-         </div>  
-       </div>                           		
+           </div>
+         </div>
+       </div>
 <!-- Products section -->
 
-<!-- Required JavaScript libraris collection -->    
-<!--The jQuery library from local-->    
+<!-- Required JavaScript libraris collection -->
+<!--The jQuery library from local-->
         <script type="text/javascript" src="acc/js/jquery.min.js"></script>
-<!-- Bootstrap library from local -->        
+<!-- Bootstrap library from local -->
         <script type="text/javascript" src="acc/js/bootstrap.min.js"></script>
-        
+
         <!-- In own hosting -->
         <!-- <script src="acc/js/wow.min.js"></script>-->
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        
+
 <script>
         //Initializing WOW aninations
           new WOW().init();
 </script> --}}
         <!-- Main-body start -->
+<h1>Accessories</h1>
         <div class="main-body">
             <div class="page-wrapper">
                 <!-- Page-header start -->
@@ -113,7 +120,7 @@
                         <div class="col-lg-8">
                             <div class="page-header-title">
                                 <div class="d-inline">
-                                    <h1>Accessories</h1>
+
                                     <span>Below are the accessories that are available in the service centres.</span>
                                 </div>
                             </div>
@@ -360,5 +367,5 @@
             </div>
         </div>
 	</body>
-</html>                    
+</html>
 @endsection

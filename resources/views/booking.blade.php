@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('dash')
-@include('sidebar.service')
+@include('sidebar.booking')
 @endsection
 @section('content')
 <html>
@@ -58,7 +58,7 @@
                     {{Session::get('message')}}
                 </div>
             @endif
-			<form action="{{route('service.store')}}" method="post">
+			<form action="{{route('booking.store')}}" method="post">
 				@csrf
 				<label>Booking Date:</label>
 				<input type="date" placeholder="Company..." name="date" class="form-control @error('date') is-invalid @enderror">
