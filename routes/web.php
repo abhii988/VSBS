@@ -16,15 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::group(['middleware'=>['auth','admin']], function(){
-
-// });
-Route::get('/admin', function () {
-    return view('admin.home');
+Route::group(['middleware' => ['auth','admin']], function(){
+//     Route::get('/dashboard', function() {
+//         return view('admin.dashboard');
+//     });
+//     Route::get('/service', function() {
+//         return view('admin.service');
+//     });
+//     Route::get('/users', function() {
+//         return view('admin.users');
+//     });
+    Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/service', [App\Http\Controllers\AdminController::class, 'index1'])->name('admin.service');
+    Route::get('/users', [App\Http\Controllers\AdminController::class, 'index2'])->name('admin.users');
 });
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index4'])->name('admin.home');
-Route::get('/admin/service', [App\Http\Controllers\HomeController::class, 'index5'])->name('admin.service');
-Route::get('/admin/users', [App\Http\Controllers\HomeController::class, 'index6'])->name('admin.users');
+//Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+//Route::get('/service', [App\Http\Controllers\AdminController::class, 'index1'])->name('admin.service');
+//Route::get('/users', [App\Http\Controllers\AdminController::class, 'index2'])->name('admin.users');
 //Route::get('/admin/service', function () {
 //    return view('admin.service');
 //});
